@@ -7,8 +7,6 @@ app = Flask(__name__)
 
 from DB import create_views_table, save, remove, get_views
 
-create_views_table()
-
 @app.route('/counter')
 def counter():
     ip = request.headers.get('X-Forwarded-For', request.remote_addr)
@@ -29,6 +27,6 @@ def counter():
     return send_file(io.BytesIO(svg.encode()), mimetype='image/svg+xml')
 
 if __name__ == '__main__':
-    init_db()
+    create_views_table()
     app.run()
 
