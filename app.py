@@ -18,7 +18,7 @@ SessionLocal = sessionmaker(bind=engine)
 app = Flask(__name__)
 
 # Définition du modèle Views
-from DB import create_views_table, save, remove, get_views
+from DB import init_db, save, remove, get_views
 
 @app.route('/counter')
 def counter():
@@ -55,7 +55,7 @@ def counter():
 if __name__ == '__main__':
     # Créer la table des vues à la première exécution
     try:
-        create_views_table()
+        init_db()
         app.run()
     except Exception as e:
         print(f"Erreur lors de l'initialisation de la base de données: {e}")
