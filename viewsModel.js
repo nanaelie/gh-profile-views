@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS views (
+  ip TEXT PRIMARY KEY,
+  timestamp TIMESTAMP
+);
