@@ -19,12 +19,11 @@ module.exports = async (req, res) => {
     const text = req.query.label || "Profile Views";
     const color = req.query.color;
 
-    let tbgcolor = "orange", vbgcolor = "blue";
-    if (color && color.includes('-')) {
-      [tbgcolor, vbgcolor] = color.split('-');
+    if (!color) {
+      color = "orange";
     }
 
-    const svg = generateSVG(text, count, tbgcolor, vbgcolor);
+    const svg = generateSVG(text, count, color);
 
     res.setHeader('Content-Type', 'image/svg+xml');
     res.send(svg);
