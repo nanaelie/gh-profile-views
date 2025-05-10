@@ -23,7 +23,6 @@
   `;
 }
 
-module.exports = generateSVG;
 */
 
 function generateSVG(label, count, color) {
@@ -55,3 +54,4 @@ function generateSVG(label, count, color) {
   `;
 }
 
+module.exports = generateSVG;
