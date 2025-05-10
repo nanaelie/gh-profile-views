@@ -1,4 +1,5 @@
-function generateSVG(text, count, tbgcolor, vbgcolor) {
+function generateSVG(label, count, color) {
+  /*
   const padding = 10;
   const fontSize = 14;
   const charWidth = 8;
@@ -10,7 +11,9 @@ function generateSVG(text, count, tbgcolor, vbgcolor) {
   const countWidth = countText.length * charWidth + 2 * padding;
   const width = labelWidth + countWidth;
   const height = 25;
-
+  */
+  return `<p><img src="https://img.shields.io/badge/${label.replace(' ', '_')}-${count}-${color}"/></p>`
+  /*
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="border-radius:5px">
       <!-- Bloc titre -->
@@ -41,7 +44,7 @@ function generateSVG(text, count, tbgcolor, vbgcolor) {
         ${countText}
       </text>
     </svg>
-  `;
+  `;*/
 }
 
 module.exports = generateSVG;
