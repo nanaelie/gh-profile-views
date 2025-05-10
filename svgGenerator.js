@@ -10,10 +10,10 @@ function generateSVG(label, count, color) {
   return `
 <svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}" style="border-radius: 6px;">
   <rect x="0" y="0" width="${labelWidth}" height="${height}" fill="#555" />
-  <rect x="${labelWidth}" y="0" width="${labelWidth}" height="${height}" fill="${color}" /> // labelWidth
+  <rect x="${labelWidth}" y="0" width="${countWidth}" height="${height}" fill="${color}" />
 
   <text x="${labelWidth / 2}" y="14" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">${labelText}</text>
-  <text x="${labelWidth + labelWidth / 2}" y="14" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">${countText}</text>
+  <text x="${labelWidth + countWidth / 2}" y="14" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">${countText}</text>
 </svg>
   `;
 }
