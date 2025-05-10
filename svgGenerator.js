@@ -12,7 +12,7 @@ function generateSVG(label, count, color) {
   const width = labelWidth + countWidth;
   const height = 25;
   */
-  return `<p><img src="https://img.shields.io/badge/${label.replace(' ', '_')}-${count}-${color}"/></p>`
+  return `https://img.shields.io/badge/${label.replace(' ', '_')}-${count}-${color}`
   /*
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="border-radius:5px">
