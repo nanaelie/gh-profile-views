@@ -8,7 +8,7 @@ function generateSVG(label, count, color) {
   const height = 20;
 
   return `
-<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}" style="border-radius: 8px;box-shadow: 0 0 5px 2px #424242">
+<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}" style="border-radius: 8px; filter: drop-shadow(0 0 0.75rem crimson);">
   <!-- Label background -->
   <rect x="0" y="0" width="${labelWidth}" height="${height}" fill="#555" />
   <!-- Count background -->
