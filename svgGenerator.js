@@ -1,50 +1,26 @@
 function generateSVG(label, count, color) {
-  /*
-  const padding = 10;
-  const fontSize = 14;
-  const charWidth = 8;
-
-  const labelText = text.toString();
+  const labelText = label;
   const countText = count.toString();
 
-  const labelWidth = labelText.length * charWidth + 2 * padding;
-  const countWidth = countText.length * charWidth + 2 * padding;
-  const width = labelWidth + countWidth;
-  const height = 25;
-  */
-  return `https://img.shields.io/badge/${label.replace(' ', '_')}-${count}-${color}`
-  /*
-  return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="border-radius:5px">
-      <!-- Bloc titre -->
-      <rect x="0" y="0" width="${labelWidth}" height="${height}" fill="${tbgcolor}" />
-      <text 
-        x="${labelWidth / 2}" 
-        y="${height / 2 + fontSize / 2 - 2}" 
-        fill="#fff" 
-        font-size="${fontSize}px" 
-        font-family="Arial" 
-        font-weight="bold" 
-        text-anchor="middle"
-      >
-        ${labelText}
-      </text>
+  const labelWidth = labelText.length * 7 + 10;
+  const countWidth = countText.length * 7 + 10;
+  const totalWidth = labelWidth + countWidth;
+  const height = 20;
 
-      <!-- Bloc compteur -->
-      <rect x="${labelWidth}" y="0" width="${countWidth}" height="${height}" fill="${vbgcolor}" />
-      <text 
-        x="${labelWidth + countWidth / 2}" 
-        y="${height / 2 + fontSize / 2 - 2}" 
-        fill="#fff" 
-        font-size="${fontSize}px" 
-        font-family="Arial" 
-        font-weight="bold" 
-        text-anchor="middle"
-      >
-        ${countText}
-      </text>
-    </svg>
-  `;*/
+  return `
+<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}">
+  <!-- Label background -->
+  <rect x="0" y="0" width="${labelWidth}" height="${height}" fill="#555" />
+  <!-- Count background -->
+  <rect x="${labelWidth}" y="0" width="${countWidth}" height="${height}" fill="${color}" />
+
+  <!-- Label text -->
+  <text x="${labelWidth / 2}" y="14" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">${labelText}</text>
+  
+  <!-- Count text -->
+  <text x="${labelWidth + countWidth / 2}" y="14" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">${countText}</text>
+</svg>
+  `;
 }
 
 module.exports = generateSVG;
