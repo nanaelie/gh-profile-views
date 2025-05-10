@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     const now = new Date();
     const cutoff = new Date(now.getTime() - 60 * 60 * 1000);
 
-    await remove(cutoff.getTime());
+    // await remove(cutoff.getTime());
     await save(ip, now.getTime());
     const count = await getViews();
 
