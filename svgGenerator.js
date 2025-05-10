@@ -1,4 +1,4 @@
-/*function generateSVG(label, count, color) {
+function generateSVG(label, count, color) {
   const labelText = label;
   const countText = count.toString();
 
@@ -8,7 +8,7 @@
   const height = 20;
 
   return `
-<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}" border-radius="8px">
+<svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="${height}" style="border-radius: 8px;">
   <!-- Label background -->
   <rect x="0" y="0" width="${labelWidth}" height="${height}" fill="#555" />
   <!-- Count background -->
@@ -22,9 +22,9 @@
 </svg>
   `;
 }
+module.exports = generateSVG;
 
-*/
-
+/*
 function generateSVG(label, count, color) {
   const labelText = label;
   const countText = count.toString();
@@ -55,3 +55,4 @@ function generateSVG(label, count, color) {
 }
 
 module.exports = generateSVG;
+*/
