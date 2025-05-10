@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     const count = await getViews();
 
     const text = req.query.label || "Profile Views";
-    const color = req.query.color;
+    let color = req.query.color;
 
     if (!color) {
       color = "orange";
