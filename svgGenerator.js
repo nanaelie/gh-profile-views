@@ -2,8 +2,8 @@ function generateSVG(label, count, color) {
   const labelText = label;
   const countText = count.toString();
 
-  const labelWidth = labelText.length * 7 + 6;
-  const countWidth = countText.length * 7 + 6;
+  const labelWidth = labelText.length * 7 + 1;
+  const countWidth = countText.length * 7 + 1;
   const totalWidth = labelWidth + countWidth;
   const height = 20;
 
